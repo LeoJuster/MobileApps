@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class SpaceShooter extends View {
-    private static final Context content = ;
+    Context content;
     Context context;
     Bitmap background, lifeImage;
     Handler handler;
@@ -43,8 +43,8 @@ public class SpaceShooter extends View {
         }
     };
 
-    public SpaceShooter() {
-        super(content);
+    public SpaceShooter(Context context) {
+        super(context);
         this.context = context;
         Display display = ((Activity) getContext()).getWindowManager().getDefaultDisplay();
         Point size = new Point();
